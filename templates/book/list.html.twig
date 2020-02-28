@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Booklord</title>
+    </head>
+    <body>
+        <style>
+            .example-wrapper {
+                margin: lem auto;
+                max-width: 800px;
+                width: 95%;
+                font: 18px / 1.5 sans-serif;
+            }
+            .example-wrapper code{
+                background: #F5F5F5;
+                padding: 2px 6px;
+            }
+        </style>
+        <div class="example-wrapper">
+            <h1>List of all books</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>ISBN</td>
+                        <td>Title</td>
+                        <td>Year</td>
+                        <td>Publisher</td>
+                        <td>Category</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                        <tr>
+                            <td>{{ book.getIsbn }}</td>
+                            <td>{{ book.getTitle }}</td>
+                            <td>{{ book.getYear }}</td>
+                            <td>{{ book.getPublisher }}</td>
+                            <td>{{ book.getCategory }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>    
